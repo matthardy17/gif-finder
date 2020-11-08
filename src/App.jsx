@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: null
+      selectedGifId: "mW05nwEyXLP0Y"
     };
   }
 
@@ -41,6 +41,7 @@ class App extends Component {
           Gif Finder
           <br />
           <ReactTypingEffect text="Made in React" speed="100" />
+          <img src="./assets/Poweredby_100px-Black_VertText" alt=""/>
         </div>
         <div className="scenes">
           <div className="left-scene">
