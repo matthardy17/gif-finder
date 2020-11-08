@@ -1,0 +1,114 @@
+#root > div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(12,155,231,1) 60%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 25, 25, 0.3);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(25, 25, 25, 0.7)}
+
+::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+.title {
+  height: 10vh;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+}
+
+.scenes {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+.left-scene {
+  flex: 0 0 60%;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+
+  .form-search {
+    padding: 60px 60px 60px 120px;
+    border: none;
+    background-color: rgba(25, 25, 25, 0.3);
+    font-size: 2.6em;
+    box-shadow: none;
+    border-radius: 20px;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: rgba(25, 25, 25, 0.5);
+    }
+  }
+
+  &:before {
+    content: '\F002';
+    position: absolute;
+    color: white;
+    top: 60px;
+    left: 60px;
+    font-family: FontAwesome;
+    font-size: 2.6em;
+    opacity: 0.4;
+  }
+
+  .selected-gif {
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 232px);
+
+    .gif {
+      max-width: 80%;
+      border-radius: 20px;
+      max-height: 80%;
+      margin: auto;
+    }
+  }
+}
+
+.right-scene {
+  flex: 0 0 40%;
+  overflow: scroll;
+
+  .rcs-inner-handle {
+    background-color: cornflowerblue;
+  }
+
+  .gif-list {
+    column-count: 2;
+    column-gap: 5px;
+    padding: 5px;
+
+    .gif {
+      width: 100%;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+  }
+}
+
